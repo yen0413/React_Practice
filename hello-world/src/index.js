@@ -4,17 +4,19 @@ import './index.css';
 import Textarea  from './App';
 import reportWebVitals from './reportWebVitals';
 import reactDom from 'react-dom';
-
+import App from './practice';
+import State from './state-practice';
+import UseState from './useState-practice';
+import FetchPractice from './fetch-practice'
+import ComponentDidMount from './componentDidMount'
 //React所使用的一種特殊Javascript語法: JSX
 //1.html語法可以當作參數傳遞
 //2.只能傳遞一個元素，意即「傳遞時是傳一個元素」，如果有一堆div、button......要傳的話，就要用一個container把他們包起來。
 //EX:  
-{/* 
-  <div>
-    <button> 大家好 </button>
-    <h1> 我不好 </h1>
-  </div>
- */}
+//   <div>
+//     <button> 大家好 </button>
+//     <h1> 我不好 </h1>
+//   </div>
 
 const styleArgument = {fontSize:'2um',color:'red'}  //style變為一物件、屬性名稱規則改用駝峰法(用大寫區隔)、屬性的值變成字串
 const name = "Rex"
@@ -107,6 +109,45 @@ reactDom.render(
 
 
 
+
+// const changeName=(newName)=>{ 
+//   btnName=newName;
+//   console.log("hey")//加入此行
+// }
+
+//var btnName ="舊的名字";
+reactDom.render(
+  <div>
+      <App/>
+  </div>,
+  document.getElementById('practiceClassComponent')
+);
+
+
+reactDom.render(
+  <div>
+    <State/>
+  </div>
+  ,document.getElementById('statePractice')
+);
+
+reactDom.render(
+  <div>
+    <UseState/>
+  </div>,
+  document.getElementById('useState-practice')
+);
+reactDom.render(
+  <div>
+    <FetchPractice/>
+  </div>,
+  document.getElementById('fecth-practice')
+);
+reactDom.render(
+  <div>
+    <ComponentDidMount/>
+  </div>,document.getElementById('componentDidMount')
+)
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
