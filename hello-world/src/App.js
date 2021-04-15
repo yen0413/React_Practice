@@ -20,6 +20,16 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
-export default App;
+
+function TextArea(props){
+  return(
+    <div style={{width:'100px'}}>
+      <input id="text1" type='text' placeholder='enter something...' onChange={props.handleChange}></input>
+      <button> {props.children} </button> 
+      {/* <div>{document.getElementById('text1').value?123:123}</div> */}
+    </div>
+  )
+}
+export default TextArea;
